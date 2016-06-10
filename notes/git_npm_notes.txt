@@ -1,0 +1,38 @@
+configure git:
+git config --global user.name = "nick_git"
+git config --global user.email = "your_email"
+
+git init
+git remote add origin https://link_on_github (push git from github to your PC)
+git add -A (add all files modifies)
+git commit -m "any message you want"
+git status (looking if have any file for commit or new)
+git push origin master (up to github)
+
+git config --global --add core.longpaths true (permitir arquivos longos)
+
+git config --local core.autocrlf false (problema de tamanho do arquivo)
+
+______________________________________________________
+TODOS OS PACOTES NECESSARIOS PARA INICIAR UM PROJETO EM REACT
+
+npm install --g browserify
+npm install --save babelify
+npm install --save watchify
+npm install --save babel-preset-react
+npm install --save react 
+npm install --save react-dom
+______________________________________________________
+
+npm init (create the package.json)
+add this line on package.json before "scripts"
+"start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+this line tell for the compiler what he needs and when I'll save the file JS 
+
+npm start (run, compile the file JSX for JS)
+
+npm install --save react-router (for create route in project)
+npm install -g htp-server (server node)
+
+for running server
+http-server -p 8080 (where 8080 can be any port)
